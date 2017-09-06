@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}SKLZ Media{% endblock %}</title>
+		
+		
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="description" content="" />
+		<meta name="author" content="" />
+		
+        {% block stylesheets %}
+		
+		{% endblock %}
+		
+		<!-- Bootstrap Core CSS -->
+			<link href="{{asset('resources/css/bootstrap.min.css')}}" rel="stylesheet">
+
+			<!-- Custom Fonts -->
+			<link href="{{asset('resources/css/font-awesome.min.css')}}" rel="stylesheet" type="text/css" />
+			<link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css' />
+			<link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css' />
+
+			<!-- Plugin CSS -->
+			<link href="{{asset('resources/css/magnific-popup.css')}}" rel="stylesheet" />
+
+			<!-- Theme CSS -->
+			<link href="{{ asset('resources/css/creative.css')}}" rel="stylesheet" />
+		
+		
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico')}}" />
+    </head>
+    <body>
+        {% block body %}{% endblock %}
+		{% block javascripts %}{% endblock %}
+		
+		<!-- jQuery -->
+		<script src="{{asset('resources/js/jquery.min.js')}}"></script>
+
+		<!-- Bootstrap Core JavaScript -->
+		<script src="{{asset('resources/js/bootstrap.min.js')}}"></script>
+
+		<!-- Plugin JavaScript -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+		<script src="{{asset('resources/js/scrollreveal.min.js')}}"></script>
+		<script src="{{asset('resources/js/jquery.magnific-popup.min.js')}}"></script>
+
+		<!-- Theme JavaScript -->
+		<script src="{{asset('resources/js/creative.min.js')}}"></script>
+		
+		<script>	
+	
+		$(document).ready(function(){
+		
+			var ventana_ancho = $(window).width();
+
+			if(ventana_ancho <= 768 ) {
+				$("#angle-left-1").removeClass("hidden");
+				$("#angle-right-1").removeClass("hidden");
+				
+				$("#2").addClass("hidden");
+				$("#3").addClass("hidden");
+				$("#4").addClass("hidden");			
+				
+			}
+
+			
+		});
+		
+		function goBack(id){
+		
+			//if(idToShow == "angle-left-1" || idToShow == "angle-right-1")
+			//$cajas = $("div[name='caja']");
+
+			total = $(".caja").length;
+			show = id-1;
+			if(id == 1) show = total;		
+			
+			$("#"+id).addClass("hidden");
+			$("#"+show).removeClass("hidden");
+			$("#angle-left-"+show).removeClass("hidden");
+			$("#angle-right-"+show).removeClass("hidden");
+			
+		
+		}
+		
+		function goForward(id){
+		
+			//if(idToShow == "angle-left-1" || idToShow == "angle-right-1")
+			//$cajas = $("div[name='caja']");
+
+			total = $(".caja").length;
+			show = id+1;
+			if(id == total) show = 1;
+			
+			$("#"+id).addClass("hidden");
+			$("#"+show).removeClass("hidden");
+			$("#angle-left-"+show).removeClass("hidden");
+			$("#angle-right-"+show).removeClass("hidden");
+			
+		
+		}
+
+	
+	</script>
+		
+    </body>
+</html>
