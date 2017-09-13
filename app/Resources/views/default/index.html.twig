@@ -1,12 +1,266 @@
 {% extends 'base.html.twig' %}
+{% block title %}SKLZ Media{% endblock %}
+{% block stylesheets %}
+	<!-- Theme CSS -->
+    <link href="{{asset('resources/css/creative.css')}}" rel="stylesheet">
+{% endblock %}
+
+
+{% block header %}
+
+	<header>
+        <div class="header-content">
+            <div class="header-content-inner">
+                <h1 id="homeHeading" class="text-responsive title">Hello, we're SKLZ</h1>
+				<h3 class="subtitle-main">Your Agency's growth partner.</h3>                
+                
+                <p class="opacity-70">When you're a new fast-growing agency. With SKLZ Media's help, there's no limit to how much you can scale your agency's growth - every step of the way.</p>
+                <a href="{{path('get-started')}}" class="btn btn-primary btn-xl page-scroll">Growth start Here</a>
+            </div>			
+        </div>		
+    </header>
+
+{% endblock %}
+
+{% block pageid 'homepage' %}
 
 {% block body %}
 
-    <h1 class="text-center">Holaaaaaaaaaa</h1>
+	<section class="bg-primary-white" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+					<h4 class="tag-subtitle opacity-70">Our skills</h4>
+                    <h2 class="section-heading subtitle">How can we help you today?</h2>
+					<p class="text-responsive">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque velit dui, elementum eu commodo ut, volutpat ut magna. Mauris consequat urna eget quam gravida, ac interdum tortor dapibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus diam velit, vulputate aliquam risus sit amet, feugiat aliquet ipsum.</p>
+                    
+					
+						
+					<div id="contenedor-cajas" class="contenedor-cajas">	
+						
+						
+						<div id="1" class="col-xs-12 col-sm-6 col-md-6 col-lg-6 caja">
+							<div class="row-card centrar-flex">
+								<a href='#' class="black opacity-70" onclick="goBack(1);return false;"><i id="angle-left-1" class="fa fa-angle-left size-40 margin-right hidden" aria-hidden="true"></i></a>
+								<a href="{{path('power-ups')}}">
+									<div id="ux-design" class="box shadows">
+										<img class="ppc" src="{{asset('resources/img/ICON_WEBDEVELOPMENT.png')}}">
+										<img class="blue" src="{{asset('resources/img/ICON_WEBDEVELOPMENT-blue.png')}}">
+										<h4 class="col-xs-12 go-bottom color">Power-ups your development team</h4>
+										
+										<button class="btn btn-default btn-xl page-scroll visibility">Get Started</button>	
+				
+									</div>
+								</a>
+								<a href="#" class="black opacity-70"  onclick="goForward(1);return false;"><i id="angle-right-1" class="fa fa-angle-right size-40 margin-left hidden" aria-hidden="true"></i></a>	
+							</div>
+							
+						</div>	
+						
+						<div id="2" class="col-xs-12 col-sm-6 col-md-6 col-lg-6 caja">
+							<div class="row-card  centrar-flex">
+								<a href="#" class="black opacity-70" onclick="goBack(2);return false;"><i id="angle-left-2" class="fa fa-angle-left size-40 margin-right hidden" aria-hidden="true"></i></a>					
+								<a href="{{path('warm-leads')}}">
+									<div id="web-development" class="box shadows">								
+										<img class="ppc" src="{{asset('resources/img/ICON_WARM_LEAD.png')}}">
+										<img class="blue" src="{{asset('resources/img/ICON_WARM_LEAD-blue.png')}}">
+										<h4 class="col-xs-12 go-bottom color">Get Warm Lead introductions</h4>
+										<button class="btn btn-default btn-xl page-scroll visibility">Get Started</button>
+																
+									</div>
+								</a>
+								<a href="#" class="black opacity-70"  onclick="goForward(2);return false;"><i id="angle-right-2" class="fa fa-angle-right size-40 margin-left hidden" aria-hidden="true"></i></a>
+							</div>		
+						</div>
+						
+						
+					
+						
+						
+					
+                    </div>
+					
+                    
+					
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+	
+	
+	
+	<section class="bg-primary what-you-need" id="about">
+        <div class="container">
+            <div class="row ">
+                <div class="col-lg-8 col-lg-offset-2 text-left">
+					
+					
+                    <h4 class="tag-subtitle opacity-70">Premier tech partner</h4>
+                    <h2 class="section-heading">Gain an unfair advantage</h2> 
+						
+					<p class="text-faded center-element">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+					</p>	
+                    <ul class="list-inline ">
+						<li><img class="logos-need" src="{{asset('resources/img/logo-ps.png')}}"</li>
+						<li><img class="logos-need" src="{{asset('resources/img/logo-sketch.png')}}"</li>
+						<li><img class="logos-need" src="{{asset('resources/img/logo-dropbox.png')}}"</li>
+						<li><img class="logos-need" src="{{asset('resources/img/logo-principle.png')}}"</li>
+					</ul>
+                </div>
+            </div>
+        </div>
+    </section>
+	
+	
+	<section class="bg-services we-can-help">
+        <div class="container">
+            <div class="row">
+
+				
+				<div class="col-lg-8 col-lg-offset-2 content text-right">
+					
+						<ul class="list-inline margin-bottom-reduce">
+							<li>
+								<h4 class="tag-subtitle">we can help</h4>
+							</li>
+							<li>
+								<img class="icon-heart" src="{{asset('resources/img/ICON_HEART.png')}}">                   
+							</li>					
+						</ul>
+						
+						<h2 class="section-heading subtitle">Success for You<br>is Success for us. </h2>					
+						    
+					
+						<p class="text">is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+				</div>		
+				<div class="col-xs-12 text-left-absolut">		
+						<ul class="list-inline" id="list-horizontal-to-vertical">
+							<li>SUPPORT </li>
+							<li>FRONTEND</li>
+							<li>MARKETING SPECIALISTS </li>
+						</ul>					
+						<a href="{{path('get-started')}}" class="page-scroll btn btn-default btn-xl sr-button">Get Started</a>
+					
+                    
+                </div>
+				
+
+            </div>
+        </div>
+    </section>
+	
+	<section id="services" class="story-together">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">This could be the beginning of our<br>bautiful story together.</h2>
+                    <a href="{{path('get-started')}}" class="btn btn-primary btn-xl page-scroll">Go with SKLZ</a>
+					<h5 class="section-heading">More agencies love working with us</h5>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+				<div class="row-content">
+					
+					<div class="col-sm-3 col-xs-6 text-center">
+						<div class="service-box">
+							<img src="{{asset('resources/img/logo-google.png')}}" >							
+						</div>
+					</div>
+					<div class="col-sm-3 col-xs-6 text-center">
+						<div class="service-box">
+							<img src="{{asset('resources/img/logo-github.png')}}" >
+						</div>
+					</div>
+					<div class="col-sm-3  col-xs-6 text-center">
+						<div class="service-box">
+							<img src="{{asset('resources/img/logo-airbnb.png')}}" >
+						</div>
+					</div>
+					<div class="col-sm-3 col-xs-6 text-center">
+						<div class="service-box">
+							<img src="{{asset('resources/img/logo-flickr.png')}}" >
+						</div>
+					</div>               
+					
+					
+					
+						
+                </div>
+            </div>
+        </div>
+	</section>
+
 {% endblock %}
 
-{% block stylesheets %}
-<style>
-   
-</style>
+
+{% block footer %}
+	{{parent()}}
 {% endblock %}
+
+
+{% block javascripts %}
+	{{ parent() }}
+	<script>	
+			
+		$(document).ready(function(){
+				
+			var ventana_ancho = $(window).width();
+
+			if(ventana_ancho <= 768 ) {
+				$("#angle-left-1").removeClass("hidden");
+				$("#angle-right-1").removeClass("hidden");
+						
+				$("#2").addClass("hidden");
+				$("#3").addClass("hidden");
+				$("#4").addClass("hidden");			
+						
+			}
+
+					
+		});
+				
+		function goBack(id){
+				
+			//if(idToShow == "angle-left-1" || idToShow == "angle-right-1")
+			//$cajas = $("div[name='caja']");
+
+			total = $(".caja").length;
+			show = id-1;
+			if(id == 1) show = total;		
+					
+			$("#"+id).addClass("hidden");
+			$("#"+show).removeClass("hidden");
+			$("#angle-left-"+show).removeClass("hidden");
+			$("#angle-right-"+show).removeClass("hidden");
+					
+				
+		}
+				
+		function goForward(id){
+				
+			//if(idToShow == "angle-left-1" || idToShow == "angle-right-1")
+			//$cajas = $("div[name='caja']");
+
+			total = $(".caja").length;
+			show = id+1;
+			if(id == total) show = 1;
+					
+			$("#"+id).addClass("hidden");
+			$("#"+show).removeClass("hidden");
+			$("#angle-left-"+show).removeClass("hidden");
+			$("#angle-right-"+show).removeClass("hidden");
+					
+				
+		}
+
+			
+	</script>
+
+{% endblock %}
+
+
+
+

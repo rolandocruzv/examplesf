@@ -1,0 +1,307 @@
+{% extends 'base.html.twig' %}
+{% block title %}SKLZ Media{% endblock %}
+{% block stylesheets %}
+	<!-- Theme CSS -->   
+	<link href="{{asset('resources/css/contact-us.css')}}" rel="stylesheet">
+	
+{% endblock %}
+
+{% block header %}
+
+	<section class="section-technologies text-center">
+	
+		<div class="container">
+			<div class="row">
+				
+					<h1 class="title text-white text-left">Contact us</h1>
+			</div>
+			<div class="row">
+				
+					<div class="row-customer">
+						
+						<div class="customer-link">
+							<a href="{{path('get-started')}}?customer=01">
+								<ul class="list-inline">
+									<li>
+										<h1>Benoit, CEO</h1>								
+									</li>
+									<li><img src="{{asset('resources/img/customer-arrow.png')}}"></li>	
+								</ul>
+								<h2>Video & Brand content</h2>
+							</a>
+						</div>
+					
+					</div>		
+				
+			</div>
+		</div>
+        
+	</section>
+
+{% endblock %}
+
+{% block pageid 'why-us' %} 
+
+{% block body %}
+
+
+	<section class="bg-services we-can-help" id="">
+        <div class="container">
+            <div class="row">
+
+				
+				<div class="col-sm-12 col-md-7 col-lg-8 text-left">
+				
+					<div class="row">
+					
+						<div class="col-md-10">
+						
+						
+							<form role="form" class="contact-form" method="post" action="contact-form.php"> 
+								
+								<h2 class="title-form-contact">Hello. How can We help you today?</h2>
+								<h2 class="form-group-title">What's your role?*</h2>
+								<div class="form-group">
+									<label class="radio-inline" for="details-role-artist">
+										<input id="details-role-artist" name="role" value="VP/DIRECTOR" type="radio" checked="checked"> VP/DIRECTOR
+									</label>
+									<label class="radio-inline" for="details-role-manager">
+										<input id="details-role-manager" name="role" value="Manager" type="radio"> Manager
+									</label>
+									<label class="radio-inline" role="details-role-other">
+										<input id="details-role-other" name="role" value="Other" type="radio"> Other
+									</label>
+								</div>
+
+								<div class="form-group form-group-name">
+								  <div class="row">
+									<div class="col-md-6">
+									  <input class="form-control" name="first_name" placeholder="First Name" required="" type="text">
+									</div>
+									<div class="col-md-6">
+									  <input class="form-control" name="last_name" placeholder="Last Name" required="" type="text">
+									</div>
+									<div class="col-md-12">
+										<input class="form-control" name="email" placeholder="Email Address" required="true" type="email">
+									</div>	
+								  </div>
+								</div>
+
+
+								<h2 class="form-group-title">What type of project do you have?*</h2>
+								<div class="form-group">
+									<select class="form-control" name="project_type">
+										<option value="">--Select a project type--</option>
+										<option value="drupal">Drupal</option>
+										<option value="shopify">Shopify</option>
+										<option value="marketing">Marketing</option>											
+									</select>
+								</div>								
+
+								<h2 class="form-group-title">When do you need it?*</h2>
+								<div class="form-group">					
+									
+									<select class="form-control" name="deadline">
+										<option value="">--Select a deadline--</option>
+										<option value="I need this done asap">I need this done asap</option>
+										<option value="My deadline is in 1 week">My deadline is in 1 week</option>
+										<option value="My deadline is in 1-3 weeks">My deadline is in 1-3 weeks</option>										
+										<option value="My deadline is in 1+ months">My deadline is in 1+ months</option>										
+										<option value="No deadline, i just want a quote">No deadline, i just want a quote</option>										
+																				
+									</select>									
+																	  
+								</div>
+								<h2 class="form-group-title">Tell us a little about your project*</h2>
+								<div class="form-group">
+								  <textarea class="form-control" name="project_info" rows="6" placeholder="Enter your project info here..."></textarea>
+								</div>	
+
+								<div class="g-recaptcha" data-sitekey="6LdqdjAUAAAAAAWWtzaUUvJyY93uwhmLHIhcl93G"></div>	
+
+								<button type="submit" class="btn btn-primary submit-contact-form">Send</button>
+								
+								
+							 </form>
+						
+						
+						</div>	
+					
+					</div>
+				
+				</div>
+				
+				
+				
+				<div class="hidden-xs hidden-sm col-md-5 col-lg-4">
+					
+						
+						<div><h4 class="tag-subtitle-strong">Top FAQS</h4></div>
+						<div class="text-left faqs-accordion" id="accordion">
+							<div class="accordion-element">
+								<div class="panel-heading">
+									
+										<ul class="list-inline ul-accordion">
+											<li>
+												<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" class="accordion-toggle">
+													<h4 class="font-light responsive-text">How do I get my music on Spotify afd af adf adf adf adf adf ?</h4>
+												</a>
+											</li>
+											<li>
+												<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" class="accordion-toggle-arrow"></a>
+											</li>	
+										</ul>										
+									
+								</div>
+								<div id="collapseOne" class="panel-collapse collapse" aria-expanded="true" style="">
+									<div class="panel-body opacity-70">
+												Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+									 </div>
+								</div>
+							</div>
+							<div class="accordion-element">
+									<div class="panel-heading">
+										<ul class="list-inline ul-accordion">
+											<li>
+												<a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="true" class="accordion-toggle">
+													<h4 class="font-light">How do I get my music on Spotify?</h4>
+												</a>
+											</li>
+											<li>
+												<a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="true" class="accordion-toggle-arrow"></a>
+											</li>	
+										</ul>
+									</div>
+									<div id="collapseTwo" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
+										<div class="panel-body opacity-70">
+											Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+										</div>
+									</div>
+							</div>
+							<div class="accordion-element">
+								   <div class="panel-heading">
+										<ul class="list-inline ul-accordion">
+											<li>
+												<a data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="true" class="accordion-toggle">
+													<h4 class="font-light">How do I get my music on Spotify?</h4>
+												</a>
+											</li>
+											<li>
+												<a data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="true" class="accordion-toggle-arrow"></a>
+											</li>	
+										</ul>
+									</div>
+									<div id="collapseThree" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
+										<div class="panel-body opacity-70">
+											Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+										</div>
+									</div>
+							</div>
+						</div>
+						
+	
+					
+							
+					
+					
+				</div>
+            </div>
+        </div>
+    </section>	
+	
+	
+	<section id="services" class="story-together">
+        <div class="container">
+            <div class="row">					
+	
+				
+					<div  class="col-xs-12 col-sm-6 col-lg-3 text-center">	
+						<div class="service-box">
+							<h3></h3>
+							<h3 class="text-white">Can't find what you are looking for? </h3> 
+						</div>		
+					</div>
+					
+					<div  class="col-xs-12 col-sm-6 col-lg-3 text-center ">					
+						<div class="service-box">
+							<ul class="list-inline text-center">
+								<li><div><img src="{{asset('resources/img/contact-us-icon.png')}}"></div></li>
+								<li><a href="tel:+15142428805" data-adata="navigation_link_15142428805" class="page-scroll text-responsive" ><h3 class="text-white">514-242-8805</h3></a></li>
+							</ul> 
+						</div>			
+					</div>
+					
+					<div  class="col-xs-12 col-sm-6 col-lg-3 text-center">
+						<div class="service-box">
+							<ul class="list-inline text-center">
+								<li><div><img src="{{asset('resources/img/icon-chat-with-sales.png')}}"></div></li>
+								<li><h3 class="text-white">Chat with sales</h3></li>
+							</ul>
+						</div>		
+					</div>
+					
+					<div  class="col-xs-12 col-sm-6 col-lg-3 text-center">
+						<div class="service-box">
+							<a href="https://goo.gl/maps/LoWW2NqzYfC2">
+								<ul class="list-inline text-center">
+									
+									<li><div><img src="{{asset('resources/img/icon-address.png')}}"></div></li>
+									<li><h3 class="text-white">Montreal office</h3></li>
+									
+								</ul>  
+							</a>			
+						</div>	
+					</div>
+				
+				
+            </div>
+        </div>
+        
+	</section>
+    
+
+{% endblock %}
+{% block footer %}
+	{{parent()}}
+{% endblock %}	
+
+{% block javascripts %}
+	{{parent()}}
+	
+	<script src='https://www.google.com/recaptcha/api.js'></script>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	
+	<script>
+		$(document).ready(function(){			
+				
+			$(".why-us-box-container").click(function(){				
+			
+				checkclic = $(this);
+				total = $(".why-us-box-container");				
+				for (var j = 1; j <= total.length; j++) {				
+					if( j != checkclic.attr("id")){						
+						$("#icon-success"+j).removeClass("visible");
+						$("#icon-success"+j).addClass("hidden");
+					}else
+					{
+						$("#icon-success"+j).removeClass("hidden");
+						$("#icon-success"+j).addClass("visible");	
+					}		
+				
+				}		
+			
+			});	
+		});
+
+		$('#myDatePicker').datepicker({
+		});	
+
+	
+	</script>
+
+{% endblock %}
